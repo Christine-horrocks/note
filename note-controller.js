@@ -1,9 +1,9 @@
 
 var element = document.getElementById('app');
 
-console.log(element)
+console.log(element);
 
-element.innerHTML = Howdy
+element.innerHTML = "Howdy";
 
 // var noteList = new NoteList()
 //
