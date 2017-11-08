@@ -17,8 +17,8 @@
 
     exports.NoteController = NoteController;
 
+    noteController = new NoteController();
+
+    noteController.htmlInserter();
+
 })(this);
-
-noteController = new NoteController();
-
-noteController.htmlInserter();
