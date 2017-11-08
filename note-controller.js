@@ -1,15 +1,24 @@
+(function(exports) {
 
-var element = document.getElementById('app');
+  function NoteController(noteList = new NoteList) {
+    this.noteList = noteList;
+    this.noteListView = new NoteListView(noteList);
 
-console.log(element);
+    noteList.addNote("I like lemonade");
 
-element.innerHTML = "Howdy";
+  }
 
-// var noteList = new NoteList()
-//
-//
-//
-// $(document).ready(function(){
-//
-//   $("#app").innerHTML = howdy;
-// });
+    NoteController.prototype.htmlInserter = function() {
+      var htmlString = this.noteListView.notesToString();
+      var element = document.getElementById('app');
+      element.innerHTML = htmlString;
+
+    };
+
+    exports.NoteController = NoteController;
+
+})(this);
+
+noteController = new NoteController();
+
+noteController.htmlInserter();
