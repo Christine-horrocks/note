@@ -1,0 +1,18 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "Further Javascript",
+  "main": "assert.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christine",
+  "license": "MIT"
+}
