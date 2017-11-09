@@ -1,19 +1,19 @@
-(function(exports){
-  function createNoteListView(){
+(function(exports) {
+  function createNoteListView() {
     var noteListView = new NoteListView();
     assert.isTrue(noteListView = new NoteListView());
   }
 
   createNoteListView();
 
-  function takesNoteListOnInstantiation(){
+  function takesNoteListOnInstantiation() {
     var noteListView = new NoteListView();
     assert.isTrue(noteListView.noteList = new NoteList());
   }
 
   takesNoteListOnInstantiation();
 
-  function returnsStringOfHTML(){
+  function returnsStringOfHTML() {
     var noteListView = new NoteListView();
     noteListView.noteList.addNote("Favourite food: pesto");
     noteListView.noteList.addNote("Favourite drink: Sloe Gin");
@@ -22,7 +22,7 @@
 
   returnsStringOfHTML();
 
-  function returnsStringOfHTMLMaxTwenty(){
+  function returnsStringOfHTMLMaxTwenty() {
     var noteListView = new NoteListView();
     noteListView.noteList.addNote("Favourite food: pesto");
     noteListView.noteList.addNote("Favourite drink: Sloe Gin");
