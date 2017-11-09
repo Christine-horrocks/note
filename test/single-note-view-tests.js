@@ -1,20 +1,15 @@
 (function(exports) {
+  function addSingleNoteAsParam() {
+    var singleNoteView = new SingleNoteView();
+    singleNoteView.addSingleNote("Hello");
+    assert.isTrue(singleNoteView.note._text === "Hello");
+  }
+  addSingleNoteAsParam();
 
-
-// function singleNoteInstantiatedCorrectly() {
-//   var singleNoteView = new SingleNoteView();
-//
-// }
-// singleNoteInstantiatedCorrectly();
-
-function takesNoteAsParameter() {
-  var singleNoteView = new SingleNoteView();
-  console.log(singleNoteView.note)
-  assert.isTrue(singleNoteView.note.includes(''));
-}
-takesNoteAsParameter()
-
-
-
-
+  function returnsStringOfHtmlOnCommand() {
+    var singleNoteView = new SingleNoteView();
+    singleNoteView.addSingleNote("Hello");
+    assert.isTrue(singleNoteView.returnSingleNoteHtml() === "<ul><li><div>Hello</div></li></ul>");
+  }
+  returnsStringOfHtmlOnCommand();
 })(this);
