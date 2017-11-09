@@ -26,7 +26,6 @@
     var noteListView = new NoteListView();
     noteListView.noteList.addNote("Favourite food: pesto");
     noteListView.noteList.addNote("Favourite drink: Sloe Gin");
-    console.log(noteListView.notesToStringTwenty())
     assert.isTrue(noteListView.notesToStringTwenty() === "<ul><li><div>Favourite food: pes</li></div><li><div>Favourite drink: Sl</div></li></ul>");
   }
 
