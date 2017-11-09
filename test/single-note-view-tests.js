@@ -1,10 +1,10 @@
 (function(exports) {
-  function addSingleNoteAsParam() {
+  function addSingleNoteAddNote() {
     var singleNoteView = new SingleNoteView();
     singleNoteView.addSingleNote("Hello");
     assert.isTrue(singleNoteView.note._text === "Hello");
   }
-  addSingleNoteAsParam();
+  addSingleNoteAddNote();
 
   function returnsStringOfHtmlOnCommand() {
     var singleNoteView = new SingleNoteView();
