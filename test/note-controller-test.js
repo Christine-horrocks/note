@@ -2,8 +2,8 @@
   function htmlInserterChangesDiv() {
     noteController = new NoteController();
     noteController.htmlInserter();
-    var element = document.getElementById('app');
-    assert.isTrue( element.innerHTML  === "<ul><li id=0><div>I like lemonade</div></li></ul>");
+    var element = document.getElementById('app').textContent;
+    assert.isTrue( element  === "I like lemonade");
   }
 
   htmlInserterChangesDiv();

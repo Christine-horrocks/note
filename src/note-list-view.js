@@ -12,12 +12,11 @@
 
   NoteListView.prototype.notesToString = function() {
     array = this.notesToArray();
-    var ul = document.createElement("ul");
     var arrayHTML = array.map(function(text, index) {
       return "<li id=" + index + "><div>" + text + "</div></li>";
     });
-     ul.innerHTML = arrayHTML.join('');
-     return ul
+      var string = arrayHTML.join('');
+      return ulString = "<ul>" + string + "</ul>";
     };
 
   NoteListView.prototype.notesToStringTwenty = function() {
@@ -25,7 +24,23 @@
     var array2 = array.map(function(string){
       return string.substring(0, 20);
     });
-    return "<ul><li><div>" + array2.join( '</li></div><li><div>') + "</div></li></ul>";
+    var arrayHTML = array2.map(function(text, index) {
+      return "<li id=" + index + "><div>" + text + "</div></li>";
+    });
+    var string = arrayHTML.join('');
+    return ulString = "<ul>" + string + "</ul>";
+  };
+
+  NoteListView.prototype.urlStringTwenty = function() {
+    array = this.notesToArray();
+    var array2 = array.map(function(string){
+      return string.substring(0, 20);
+    });
+    var arrayHTML = array2.map(function(text, index) {
+      return "<a href=#" + index + ">" + text + "</a><br>";
+    });
+    var string = arrayHTML.join('');
+    return  string;
   };
 
   exports.NoteListView = NoteListView;

@@ -3,8 +3,7 @@
     var noteListView = new NoteListView();
     noteListView.noteList.addNote("Favourite food: pesto");
     noteListView.noteList.addNote("Favourite drink: Sloe Gin");
-    console.log(noteListView.notesToString())
-    assert.isTrue(noteListView.notesToString() === '<li id="0"><div>Favourite food: pesto</div></li><li id="1"><div>Favourite drink: Sloe Gin</div></li>');
+    assert.isTrue(noteListView.notesToString() === "<ul><li id=0><div>Favourite food: pesto</div></li><li id=1><div>Favourite drink: Sloe Gin</div></li></ul>");
   }
 
   returnsStringOfHTML();
@@ -13,8 +12,17 @@
     var noteListView = new NoteListView();
     noteListView.noteList.addNote("Favourite food: pesto");
     noteListView.noteList.addNote("Favourite drink: Sloe Gin");
-    assert.isTrue(noteListView.notesToStringTwenty() === "<ul><li><div>Favourite food: pest</li></div><li><div>Favourite drink: Slo</div></li></ul>");
+    assert.isTrue(noteListView.notesToStringTwenty() === "<ul><li id=0><div>Favourite food: pest</div></li><li id=1><div>Favourite drink: Slo</div></li></ul>");
   }
 
   returnsStringOfHTMLMaxTwenty();
+
+  function returnsUrlStringOfTwenty() {
+    var noteListView = new NoteListView();
+    noteListView.noteList.addNote("Favourite food: pesto");
+    noteListView.noteList.addNote("Favourite drink: Sloe Gin");
+    assert.isTrue(noteListView.urlStringTwenty() === "<a href=#0>Favourite food: pest</a><br><a href=#1>Favourite drink: Slo</a><br>");
+  }
+
+  returnsUrlStringOfTwenty();
 })(this);

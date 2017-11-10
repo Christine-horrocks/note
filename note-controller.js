@@ -5,13 +5,14 @@
     this.noteListView = new NoteListView(noteList);
 
     noteList.addNote("I like lemonade");
+    noteList.addNote("I like ducks");
 
   }
 
     NoteController.prototype.htmlInserter = function() {
-      var htmlString = this.noteListView.notesToString();
-      var element = document.getElementById('app');
-      element.innerHTML = htmlString;
+      var ulString = this.noteListView.urlStringTwenty();
+      var app = document.getElementById('app');
+      app.innerHTML = ulString;
 
     };
 
