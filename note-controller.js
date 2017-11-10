@@ -17,9 +17,28 @@
     };
 
     exports.NoteController = NoteController;
+})(this);
 
     noteController = new NoteController();
-
     noteController.htmlInserter();
 
-})(this);
+
+makeUrlChangeShowNoteForCurrentPage();
+
+function makeUrlChangeShowNoteForCurrentPage(){
+  window.addEventListener("hashchange", showNotesForCurrentPage);
+}
+
+function showNotesForCurrentPage(){
+  showNote(getNoteFromUrl(window.location));
+}
+
+function getNoteFromUrl(location){
+  return location.hash.split("#")[1];
+}
+
+function showNote(note) {
+  document
+    .getElementById("note")
+    .innerHTML = note;
+}
